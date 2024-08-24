@@ -1,1 +1,8 @@
-The two moments I felt interesting were when Peter Henderson used functional programm
+The two moments I felt interesting were when Peter Henderson used functional programming to make the picture of Square Limit and Mark Jones used functional programming to build the prototype for the problem given by DARPA in just 85 lines of Haskell.
+
+Square Limit uses a recursive pattern and Henderson's work shows how functional programming can be used to solve complex problems with concise code. It emphasizes the use of pure functions and higher-order function which can lead to more maintainable code. I liked the fact of writing plot instructions for the graph plotter just once and then made functions to plot subfigures (quartet, nonet, etc.) and finally combined many functions to recreate the artwork. He also proved laws about his combinators, which shows that algebra can be used as a description tool for laws in functional programming.
+
+I also liked how Mark Jones used functions to represent regions and was able to solve the problem in just 85 lines.
+
+Both of these examples illustrate the strengths of functional programming in terms of code clarity, conciseness, and the ability to handle complex problems. Lazy evaluation using a consumer and producer, to solve the problem in Pentium cores was very impressive as well.
+
