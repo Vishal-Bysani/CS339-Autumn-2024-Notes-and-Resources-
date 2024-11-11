@@ -1,33 +1,5 @@
 #lang sicp
 
-;; (define eval
-;;   (lambda (exp env)
-;;     (cond ((number? exp) exp)
-;;           ((symbol? exp) (lookup exp env))
-;;           ((eq? (car exp) 'quote) (cadr exp))
-;;           ((eq? (car exp) 'lambda) (list 'closure (cadr exp) (cddr exp) env))
-;;           ((eq? (car exp) 'cond) (evalcond (cdr exp) env))
-;;           ((pair? exp) (apply (eval (car exp) env) (evallist (cdr exp) env)))
-;;           (else (error "Unknown expression type")))))
-;; 
-;; (define apply
-;;   (lambda (proc args)
-;;     (cond ((primitive-op proc) (apply-prim-op proc args))
-;;           ((compound-op proc) (eval (caddr proc) (extend-environment (cadr proc) args (cadddr proc)))))))
-;; 
-;; (define evallist
-;;   (lambda (args env)
-;;     (cond ((eq? args '()) '())
-;;           (else (cons (eval (car args) env)
-;;                       (evalist (cdr args) env))))))
-;; 
-;; (define evalcond
-;;   (lambda (clauses env)
-;;     (cond ((eq? clauses '()) '())
-;;           ((eq? (caar clauses) 'else) (eval (cdar clauses) env))
-;;           ((false? (eval (caar clauses) env)) (evalcond (cdr clauses) env))
-;;           (else (eval (cdar clauses) env)))))
-
 (define (myeval exp env)
   (cond ((self-evaluating? exp) exp)
         ((variable? exp) (lookup-variable-value exp env))
