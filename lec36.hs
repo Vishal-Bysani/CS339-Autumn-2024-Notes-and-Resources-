@@ -1,4 +1,4 @@
---import Data.List
+import Data.Char
 
 type Matrix a = [[a]]
 
